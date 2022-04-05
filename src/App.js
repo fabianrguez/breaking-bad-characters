@@ -1,23 +1,21 @@
-import logo from './logo.svg';
+import { useTranslation } from 'react-i18next';
+import { useEffect } from 'react';
 import './App.css';
+import { getCharacters } from 'services/getCharacters';
 
 function App() {
+  const { t } = useTranslation();
+
+  useEffect(() => {
+    (async () => {
+      const characters = await getCharacters();
+      console.log({ characters });
+    })();
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>{t('home.title')}</h1>
     </div>
   );
 }
