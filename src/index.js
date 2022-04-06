@@ -1,10 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import { I18nextProvider } from 'react-i18next';
-import i18n from './i18n';
 import { createRoot } from 'react-dom/client';
+import { I18nextProvider } from 'react-i18next';
+import App from './App';
+import i18n from './i18n';
+import './index.css';
 
 const root = createRoot(document.getElementById('root'));
 root.render(
