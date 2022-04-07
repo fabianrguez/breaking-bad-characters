@@ -1,5 +1,6 @@
-import { Characters } from './Characters';
-import { CharacterDetail } from './CharacterDetail';
-import { NoMatch } from './NoMatch';
+import { CharactersPage } from './CharactersPage';
+import { CharacterDetailPage } from './CharacterDetailPage';
+import { NoMatchPage } from './NoMatchPage';
+import { ContainerPage } from './ContainerPage';
 
-export { Characters, CharacterDetail, NoMatch };
+export { CharactersPage, CharacterDetailPage, NoMatchPage, ContainerPage };

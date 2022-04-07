@@ -1,12 +1,26 @@
 import { getCharacters } from 'services/getCharacters';
-import { useApiCall } from './useApiCall';
+import { useCharactersContext, usePaginated } from 'hooks';
+import { useEffect } from 'react';
 
+let offset = 0;
+
+// total characters: 62
 export function useCharacters() {
-  const { data: characters, error, loading } = useApiCall(getCharacters);
+  const { data: context, addCharacters } = useCharactersContext();
+  const { data: paginatedData, error, loading, loadMore } = usePaginated(getCharacters, { offset });
+
+  useEffect(() => {
+    if (paginatedData) {
+      addCharacters(paginatedData);
+      offset += 10;
+      console.log('offset updated', offset);
+    }
+  }, [paginatedData]);
 
   return {
-    characters,
+    characters: context.characters,
     error,
     loading,
+    loadMore,
   };
 }

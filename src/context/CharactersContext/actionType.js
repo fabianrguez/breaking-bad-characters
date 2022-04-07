@@ -1,0 +1,1 @@
+export const ADD_CHARACTERS = '@characters/add-characters'
