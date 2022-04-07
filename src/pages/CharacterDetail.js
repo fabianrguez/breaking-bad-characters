@@ -1,3 +1,3 @@
-export function SingleCharacter() {
+export function CharacterDetail() {
   return <div>Single Character</div>;
 }

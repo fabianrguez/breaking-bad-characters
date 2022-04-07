@@ -1,5 +1,10 @@
 {
   "home": {
     "title": "Breaking Bad Characters"
-  }
+  },
+  "noMatch": {
+    "title": "404, Ups! It seems that this path does not exists"
+  },
+  "suggestion": "You proabably want to see all characters from breaking bad Tv Show",
+  "cta": "Go to characters list"
 }

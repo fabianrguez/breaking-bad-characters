@@ -1,28 +1,23 @@
-import { useState, useEffect } from 'react';
+import { useCharacters } from 'hooks';
 import { useTranslation } from 'react-i18next';
-import { getCharacters } from 'services/getCharacters';
-import { Outlet } from 'react-router-dom';
 
 export function Characters() {
-  const [characters, setCharacters] = useState([]);
+  const { characters, loading } = useCharacters();
   const { t } = useTranslation();
 
-  useEffect(() => {
-    (async () => {
-      const _characters = await getCharacters();
-      setCharacters(_characters);
-    })();
-  }, []);
+  if (loading) return <span>Loading...</span>
 
   return (
-    <>
+    <div>
       <h1>{t('home.title')}</h1>
       <ul style={{ paddingLeft: '2rem' }}>
-        {characters?.map(({ char_id, name }) => (
-          <li key={char_id}>{name}</li>
+        {characters?.map(({ char_id, name, img }) => (
+          <li key={char_id}>
+            <img loading="lazy" src={img} alt={name}/>
+            <h2>{name}</h2>
+          </li>
         ))}
       </ul>
-      <Outlet />
-    </>
+    </div>
   );
 }
