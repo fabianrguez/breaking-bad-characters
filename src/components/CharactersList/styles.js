@@ -1,5 +1,11 @@
 import styled from 'styled-components';
 
+export const StyledCharactersListContainer = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
+
 export const StyledCharactersList = styled.ul`
   display: flex;
   align-items: center;

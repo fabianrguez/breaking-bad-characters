@@ -1,14 +1,16 @@
-import { CharacterCard } from 'components/CharacterCard';
+import { CharacterCard } from 'components';
 import { useCharacters } from 'hooks';
-import { StyledCharactersList } from './styles';
+import { useTranslation } from 'react-i18next';
+import { StyledCharactersList, StyledCharactersListContainer } from './styles';
 
 export function CharactersList() {
   const { characters, error, loading, loadData } = useCharacters();
+  const { t } = useTranslation();
 
   if (error) return <span>An error ocurred retrieving characters list ...</span>;
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+    <StyledCharactersListContainer>
       <StyledCharactersList>
         {characters?.map(({ char_id, name, img }, index) => (
           <li key={`${char_id}-${index}`}>
@@ -16,10 +18,10 @@ export function CharactersList() {
           </li>
         ))}
       </StyledCharactersList>
-      <div style={{marginBottom: '1rem'}}>
+      <div style={{ marginBottom: '1rem' }}>
         {loading && <span>Loading characters ...</span>}
-        {characters.length < 62 && !loading && <button onClick={loadData}>Load more</button>}
+        {characters.length < 62 && !loading && <button onClick={loadData}>{t('characterList.loadMore')}</button>}
       </div>
-    </div>
+    </StyledCharactersListContainer>
   );
 }

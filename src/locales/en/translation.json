@@ -11,5 +11,8 @@
     "card": {
       "knowMore": "Know more ..."
     }
+  },
+  "charcterList": {
+    "loadMore": "Load more..."
   }
 }

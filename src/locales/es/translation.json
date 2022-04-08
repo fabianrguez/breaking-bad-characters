@@ -11,5 +11,8 @@
     "card": {
       "knowMore": "Saber más ..."
     }
+  },
+  "characterList": {
+    "loadMore": "Cargar más ..."
   }
 }

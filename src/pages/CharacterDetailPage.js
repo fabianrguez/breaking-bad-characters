@@ -1,3 +1,4 @@
+import { CharacterDetail } from 'components';
 import { useCharater } from 'hooks/useCharacter';
 import { useParams } from 'react-router-dom';
 
@@ -7,14 +8,14 @@ export function CharacterDetailPage() {
 
   if (loading) return <span>Loading character info...</span>;
 
+  // If character doesn't exists show an error
+  if (error || !character) return <span>An error ocurred</span>
+
+  console.log(character);
+
   return (
-    <div>
-      <h1>{character.name}</h1>
-      <ul>
-        <li>
-          <span>Nickname:</span> {character.nickname}
-        </li>
-      </ul>
-    </div>
+    <>
+      <CharacterDetail {...character} />
+    </>
   );
 }

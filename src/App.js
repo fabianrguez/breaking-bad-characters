@@ -2,9 +2,9 @@ import { AppRoutes } from 'routes';
 
 function App() {
   return (
-    <div className="app">
+    <main className="app">
       <AppRoutes/>
-    </div>
+    </main>
   );
 }
 
