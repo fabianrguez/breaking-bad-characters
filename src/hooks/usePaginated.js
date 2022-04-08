@@ -1,9 +1,9 @@
 import { useApiCall } from './useApiCall';
 
-export function usePaginated(callback, params = {}) {
-  const { data, error, loading, refetch } = useApiCall(callback);
+export function usePaginated(callback, params, fetchOnInit = true) {
+  const { data, error, loading, refetch } = useApiCall(callback, params, fetchOnInit);
 
-  const loadMore = () => {
+  const loadData = () => {
     refetch(params);
   };
 
@@ -11,6 +11,6 @@ export function usePaginated(callback, params = {}) {
     data,
     error,
     loading,
-    loadMore
+    loadData,
   };
 }

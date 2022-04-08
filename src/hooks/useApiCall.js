@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 
-export function useApiCall(callback, params = {}) {
+export function useApiCall(callback, apiCallParams = {}, fetchOnInit = true) {
   const [data, setData] = useState();
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(fetchOnInit);
   const [error, setError] = useState();
 
-  const fetchData = (customParams = params, { isRefetching = false } = {}) => {
+  const fetchData = (customParams = apiCallParams) => {
     setLoading(true);
     callback(customParams)
       .then((_data) => {
@@ -18,12 +18,13 @@ export function useApiCall(callback, params = {}) {
       });
   };
 
+
   const refetch = (params = {}) => {
-    fetchData(params, { isRefetching: true });
+    fetchData(params);
   };
 
   useEffect(() => {
-    fetchData();
+    fetchOnInit && fetchData();
   }, []);
 
   return {

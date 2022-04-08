@@ -6,5 +6,10 @@
     "title": "404, Ups! Parece que esta ruta no existe.",
     "suggestion": "Problamente quieras ver la lista de los personajes de Breaking Bad",
     "cta": "Ir a la lista de personajes"
+  },
+  "character": {
+    "card": {
+      "knowMore": "Saber más ..."
+    }
   }
 }
