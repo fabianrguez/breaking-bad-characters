@@ -11,8 +11,9 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: inherit;
   }
 
-  html, body, #root {
+  html, body, #root, .app {
     background: #fafafa;
+    min-height: 100vh;
   }
 
   html, body, #root, button {

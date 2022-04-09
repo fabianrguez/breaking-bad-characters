@@ -5,6 +5,6 @@ export const StyledLayoutWrapper = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 100%;
+  height: 100vh;
   padding: 1rem;
 `;
