@@ -48,7 +48,12 @@ export const GlobalStyles = createGlobalStyle`
 
   blockquote {
     font-family: 'Grape Nuts', cursive;
-    font-size: 28px;
+    font-size: 32px;
+    padding: 1.5rem 0;
+
+    &::after, &::before {
+      content: '"'
+    }
   }
 
   button {

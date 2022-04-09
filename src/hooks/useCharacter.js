@@ -1,7 +1,7 @@
 import { getCharacter } from 'services';
 import { useApiCall } from './useApiCall';
 
-export function useCharater(id) {
+export function useCharacter(id) {
   const { data: character, loading, error } = useApiCall(getCharacter, { id });
 
   return {

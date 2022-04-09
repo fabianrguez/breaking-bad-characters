@@ -1,15 +1,29 @@
 {
   "home": {
-    "title": "Breaking Bad Characters"
+    "title": "Breaking Bad Characters",
+    "loadingText": "Loading characters list.."
   },
   "noMatch": {
     "title": "404, Ups! It seems that this path does not exists",
     "suggestion": "You proabably want to see all characters from breaking bad Tv Show",
     "cta": "Go to characters list"
   },
+  "characterPage": {
+    "loadingText": "Loading character information..."
+  },
   "character": {
     "card": {
       "knowMore": "Know more ..."
+    },
+    "details": {
+      "title": "Interesting information",
+      "char_id": "ID",
+      "birthday": "Birthday",
+      "occupation": "Occupations",
+      "status": "Status",
+      "appearance": "Breaking Bad appearance",
+      "category": "Category",
+      "better_call_saul_appearance": "Better call saul appearance"
     }
   },
   "charcterList": {

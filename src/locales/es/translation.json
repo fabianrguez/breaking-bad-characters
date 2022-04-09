@@ -1,15 +1,29 @@
 {
   "home": {
-    "title": "Personajes de Breaking Bad"
+    "title": "Personajes de Breaking Bad",
+    "loadingText": "Cargando la lista de personajes..."
   },
   "noMatch": {
     "title": "404, Ups! Parece que esta ruta no existe.",
     "suggestion": "Problamente quieras ver la lista de los personajes de Breaking Bad",
     "cta": "Ir a la lista de personajes"
   },
+  "characterPage": {
+    "loadingText": "Cargando la información del personaje..."
+  },
   "character": {
     "card": {
       "knowMore": "Saber más ..."
+    },
+    "details": {
+      "title": "Datos de interés",
+      "char_id": "ID",
+      "birthday": "Cumpleaños",
+      "occupation": "Oficios",
+      "status": "Estado",
+      "appearance": "Temporadas en las que aparece",
+      "category": "Categoría",
+      "better_call_saul_appearance": "Better call saul appearance"
     }
   },
   "characterList": {

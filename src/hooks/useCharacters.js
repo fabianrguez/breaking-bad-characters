@@ -20,7 +20,6 @@ export function useCharacters() {
 
   useEffect(() => {
     if (paginatedData) {
-      console.log('paginated data update');
       addCharacters(paginatedData);
     }
   }, [paginatedData]);

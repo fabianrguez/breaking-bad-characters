@@ -13,6 +13,11 @@ export const StyledCardOverlay = styled.div`
   bottom: 0;
   border-radius: inherit;
   transition: max-height 0.3s;
+
+  @media (max-width: ${({ theme }) => theme.mobileBreakpoint}) {
+    background: transparent;
+    max-height: 100%;
+  }
 `;
 
 export const StyledCardLink = styled(Link)`
@@ -36,27 +41,18 @@ export const StyledCard = styled.article`
   border-radius: 8px;
   position: relative;
   overflow: hidden;
+  min-height: 320px;
+  min-width: 320px;
 
-  &:hover {
-    & ${StyledCardOverlay} {
-      max-height: 100%;
+  @media (min-width: ${({ theme }) => theme.mobileBreakpoint}) {
+    &:hover {
+      & ${StyledCardOverlay} {
+        max-height: 100%;
 
-      & ${StyledCardLink} {
-        opacity: 1;
+        & ${StyledCardLink} {
+          opacity: 1;
+        }
       }
     }
   }
-`;
-
-export const StyledCardImageWrapper = styled.figure`
-  height: 20rem;
-  width: 20rem;
-  overflow: hidden;
-  border-radius: inherit;
-`;
-
-export const StyledCardImage = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 `;

@@ -1,21 +1,19 @@
-import { CharacterDetail } from 'components';
-import { useCharater } from 'hooks/useCharacter';
+import { CharacterDetail, Layout } from 'components';
+import { useCharacter } from 'hooks';
+import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
 
 export function CharacterDetailPage() {
   const { characterId } = useParams();
-  const { character, loading, error } = useCharater(characterId);
+  const { character, loading, error } = useCharacter(characterId);
+  const {t} = useTranslation();
 
-  if (loading) return <span>Loading character info...</span>;
-
-  // If character doesn't exists show an error
-  if (error || !character) return <span>An error ocurred</span>
-
-  console.log(character);
+  // If character doesn't exists show an error or redirect to an error page
+  // if (error || !character) return <span>An error ocurred</span>
 
   return (
-    <>
+    <Layout isLoading={loading} error={error} loadingText={t('characterPage.loadingText')}>
       <CharacterDetail {...character} />
-    </>
+    </Layout>
   );
 }
