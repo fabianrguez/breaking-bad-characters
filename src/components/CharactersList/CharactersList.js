@@ -14,9 +14,9 @@ export function CharactersList({characters, isLoading, fetchMore}) {
       ) : (
         <>
           <StyledCharactersList>
-            {characters?.map(({ char_id, name, img }, index) => (
+            {characters?.map(({ char_id, name, nickname, img }, index) => (
               <li key={`${char_id}-${index}`}>
-                <CharacterCard name={name} image={img} id={char_id} />
+                <CharacterCard name={name} image={img} id={char_id} nickname={nickname} />
               </li>
             ))}
           </StyledCharactersList>
