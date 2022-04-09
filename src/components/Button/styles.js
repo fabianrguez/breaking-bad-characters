@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StlyedButtonWrapper = styled.div`
+export const StlyedButtonWrapper = styled.span`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -8,7 +8,6 @@ export const StlyedButtonWrapper = styled.div`
   border: 1px solid #ccc;
   min-height: 2.5rem;
   min-width: 12rem;
-  padding: 0.5rem;
   border-radius: 4px;
   transition: opacity 0.3s;
 
@@ -22,6 +21,7 @@ export const StyledButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
+  align-self: stretch;
   border: none;
   padding: 0;
   background: transparent;

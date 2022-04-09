@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 export function useApiCall(callback, apiCallParams = {}, fetchOnInit = true) {
-  const [data, setData] = useState();
+  const [data, setData] = useState(null);
   const [loading, setLoading] = useState(fetchOnInit);
   const [error, setError] = useState();
 
@@ -17,7 +17,6 @@ export function useApiCall(callback, apiCallParams = {}, fetchOnInit = true) {
         setError(err);
       });
   };
-
 
   const refetch = (params = {}) => {
     fetchData(params);
