@@ -1,4 +1,4 @@
-import { CharacterDetailPage, CharactersPage, ContainerPage, NoMatchPage } from 'pages';
+import { CharacterDetailPage, CharactersPage, ContainerPage, NoMatchPage, ErrorPage } from 'pages';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 
 export const AppRoutes = () => (
@@ -9,6 +9,7 @@ export const AppRoutes = () => (
         <Route path=":characterId" element={<CharacterDetailPage />} />
       </Route>
       <Route path="/" element={<Navigate to="/characters" />} />
+      <Route path="/error" element={<ErrorPage />} />
       <Route path="*" element={<NoMatchPage />} />
     </Routes>
   </BrowserRouter>
