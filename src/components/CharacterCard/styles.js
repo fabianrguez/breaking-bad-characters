@@ -44,6 +44,7 @@ export const StyledCard = styled.article`
   overflow: hidden;
   min-height: 320px;
   min-width: 320px;
+  max-width: 320px;
 
   & ${StyledImageWrapper} {
     width: 100%;
