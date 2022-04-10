@@ -23,7 +23,8 @@
       "status": "Estado",
       "appearance": "Temporadas en las que aparece",
       "category": "Categoría",
-      "better_call_saul_appearance": "Better call saul appearance"
+      "better_call_saul_appearance": "Better call saul appearance",
+      "newQuote": "Otra frase célebre"
     }
   },
   "characterList": {

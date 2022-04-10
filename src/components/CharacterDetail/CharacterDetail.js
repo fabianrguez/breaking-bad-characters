@@ -62,7 +62,7 @@ export function CharacterDetail({
           {quote !== '' && (
             <>
               <blockquote>{quote}</blockquote>
-              <Button onClick={getNewQuote} isLoading={quoteLoading} label="New quote" />
+              <Button onClick={getNewQuote} isLoading={quoteLoading} label={t('character.details.newQuote')} />
             </>
           )}
         </StyledCharacterDetailInfoContainer>

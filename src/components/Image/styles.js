@@ -1,5 +1,12 @@
 import styled from 'styled-components';
 
+export const StyledImage = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s;
+`;
+
 export const StyledImageWrapper = styled.figure`
   height: ${({ big }) => (big ? '40rem' : '30rem')};
   width: ${({ big }) => (big ? '30rem' : '20rem')};
@@ -13,10 +20,12 @@ export const StyledImageWrapper = styled.figure`
     height: 30rem;
     width: 100%;
   }
-`;
 
-export const StyledImage = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  @media(min-width: ${({ theme }) => theme.mobileBreakpoint} ) {
+    &:hover {
+      & ${StyledImage} {
+        transform: scale(1.1)
+      }
+    }
+  }
 `;

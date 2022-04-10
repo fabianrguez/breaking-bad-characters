@@ -1,3 +1,4 @@
+import { StyledImage, StyledImageWrapper } from 'components/Image/styles';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -44,6 +45,10 @@ export const StyledCard = styled.article`
   min-height: 320px;
   min-width: 320px;
 
+  & ${StyledImageWrapper} {
+    width: 100%;
+  }
+
   @media (min-width: ${({ theme }) => theme.mobileBreakpoint}) {
     &:hover {
       & ${StyledCardOverlay} {
@@ -52,6 +57,9 @@ export const StyledCard = styled.article`
         & ${StyledCardLink} {
           opacity: 1;
         }
+      }
+      & ${StyledImage} {
+        transform: scale(1.1);
       }
     }
   }
