@@ -5,7 +5,8 @@ export const StlyedButtonWrapper = styled.span`
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  border: 1px solid #ccc;
+  border: 2px solid ${({theme}) => theme.colors.purple};
+  color: ${({theme}) => theme.colors.purple};
   min-height: 2.5rem;
   min-width: 12rem;
   border-radius: 4px;
@@ -25,4 +26,6 @@ export const StyledButton = styled.button`
   border: none;
   padding: 0;
   background: transparent;
+  color: inherit;
+  font-weight: bold;
 `;

@@ -17,6 +17,7 @@
     },
     "details": {
       "title": "Datos de interés",
+      "titleDeaths": "Muertes del personaje",
       "char_id": "ID",
       "birthday": "Cumpleaños",
       "occupation": "Oficios",
@@ -24,7 +25,17 @@
       "appearance": "Temporadas en las que aparece",
       "category": "Categoría",
       "better_call_saul_appearance": "Better call saul appearance",
-      "newQuote": "Otra frase célebre"
+      "newQuote": "Otra frase célebre",
+      "death_id": "ID",
+      "death": "Muerto",
+      "cause": "Causa",
+      "responsible": "A manos de",
+      "last_words": "Últimas palabras",
+      "season": "Temporada",
+      "episode": "Episodio",
+      "number_of_deaths": "Número de muertes",
+      "noDeathInfo": "No hay datos registrados sobre la muerte de este personaje.",
+      "noQuoteAvailable": "No hay frase célebre registrada para este personaje."
     }
   },
   "characterList": {

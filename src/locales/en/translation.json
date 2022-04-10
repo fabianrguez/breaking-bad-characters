@@ -17,6 +17,7 @@
     },
     "details": {
       "title": "Interesting information",
+      "titleDeaths": "Characters deaths information",
       "char_id": "ID",
       "birthday": "Birthday",
       "occupation": "Occupations",
@@ -24,7 +25,17 @@
       "appearance": "Breaking Bad appearance",
       "category": "Category",
       "better_call_saul_appearance": "Better call saul appearance",
-      "newQuote": "Another character quote"
+      "newQuote": "Another character quote",
+      "death_id": "ID",
+      "death": "Death",
+      "cause": "Cause",
+      "responsible": "Responsible",
+      "last_words": "Last words",
+      "season": "Season",
+      "episode": "Episode",
+      "number_of_deaths": "Number of deaths",
+      "noDeathInfo": "There are not information about this character death.",
+      "noQuoteAvailable": "There are not quote availabe for this character."
     }
   },
   "charcterList": {

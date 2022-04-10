@@ -1,14 +1,14 @@
 import { Button, Image } from 'components';
 import { useCharacterQuote } from 'hooks';
 import { useTranslation } from 'react-i18next';
+import { CharacterInfo } from './CharacterInfo';
+import { CharacterQuote } from './CharacterQuote';
 import {
   StyledCharacterDetailContainer,
   StyledCharacterDetailHeader,
-  StyledCharacterDetailInfo,
   StyledCharacterDetailInfoContainer,
   StyledCharacterDetailInfoWrapper,
   StyledCharacterDetailName,
-  StyledCharacterFeature
 } from './styles';
 
 export function CharacterDetail({
@@ -23,13 +23,9 @@ export function CharacterDetail({
   portrayed,
   category,
   better_call_saul_appearance,
+  deaths,
 }) {
-  const { quote, loading: quoteLoading, getNewQuote } = useCharacterQuote(name);
-  const { i18n, t } = useTranslation();
-
-  const getArrayInfo = (value) => {
-    return new Intl.ListFormat(i18n.language || 'es', { type: 'conjunction' }).format(value.map(String));
-  };
+  const { t } = useTranslation();
 
   return (
     <StyledCharacterDetailContainer>
@@ -42,29 +38,16 @@ export function CharacterDetail({
       <StyledCharacterDetailInfoWrapper>
         <Image src={img} alt={name} lightBorder big />
         <StyledCharacterDetailInfoContainer>
-          <StyledCharacterDetailInfo>
-            <h4>{t('character.details.title')}</h4>
-            {Object.entries({
-              char_id,
-              birthday,
-              occupation,
-              status,
-              appearance,
-              category,
-              better_call_saul_appearance,
-            }).map(([key, value], index) => (
-              <StyledCharacterFeature key={index}>
-                <span>{t(`character.details.${key}`)}:</span>
-                {Array.isArray(value) ? <span>{getArrayInfo(value)}</span> : <span>{value}</span>}
-              </StyledCharacterFeature>
-            ))}
-          </StyledCharacterDetailInfo>
-          {quote !== '' && (
-            <>
-              <blockquote>{quote}</blockquote>
-              <Button onClick={getNewQuote} isLoading={quoteLoading} label={t('character.details.newQuote')} />
-            </>
-          )}
+          <CharacterInfo
+            data={{ char_id, birthday, occupation, status, appearance, category, better_call_saul_appearance }}
+            sectionTitle={t('character.details.title')}
+          />
+          <CharacterInfo
+            data={deaths}
+            sectionTitle={t('character.details.titleDeaths')}
+            noDataMessage={t('character.details.noDeathInfo')}
+          />
+          <CharacterQuote name={name}/>
         </StyledCharacterDetailInfoContainer>
       </StyledCharacterDetailInfoWrapper>
     </StyledCharacterDetailContainer>

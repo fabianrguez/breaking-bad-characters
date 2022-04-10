@@ -20,12 +20,13 @@ export const StyledCharacterDetailHeader = styled.header`
     position: absolute;
     width: 100%;
     bottom: 0;
-    border-bottom: 4px solid #cecece;
+    border-bottom: 4px solid ${({ theme }) => theme.colors.purple};
   }
 `;
 
 export const StyledCharacterDetailName = styled.h1`
   font-size: 2.5rem;
+  color: ${({ theme }) => theme.colors.purple};
 
   @media (max-width: ${({ theme }) => theme.mobileBreakpoint}) {
     font-size: 1.5rem;
@@ -59,6 +60,10 @@ export const StyledCharacterDetailInfo = styled.div`
   display: flex;
   flex-direction: column;
 
+  & > h4 {
+    color: ${({theme}) => theme.colors.purple};
+  }
+
   @media (max-width: ${({ theme }) => theme.mobileBreakpoint}) {
     margin-top: 1rem;
     order: 2;
@@ -73,3 +78,13 @@ export const StyledCharacterFeature = styled.div`
     flex: 1;
   }
 `;
+
+export const StyledCharacterFeatureName = styled.span`
+  font-weight: 600;
+`
+
+export const StyledNoInfoAvailable = styled.span`
+  font-size: 12px;
+  font-style: italic;
+  margin-top: 0.75rem;
+`

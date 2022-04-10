@@ -12,7 +12,8 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   html, body, #root, .app {
-    background: #fafafa;
+    background: ${({ theme }) => theme.colors.backgroundColor};
+    color: ${({ theme }) => theme.colors.white};
     min-height: 100vh;
   }
 
@@ -32,10 +33,12 @@ export const GlobalStyles = createGlobalStyle`
   blockquote {
     font-family: 'Grape Nuts', cursive;
     font-size: 32px;
+    font-weight: bold;
     padding: 1.5rem 0;
 
     &::after, &::before {
-      content: '"'
+      content: '"';
+      color: ${({theme}) => theme.colors.purple}
     }
   }
 

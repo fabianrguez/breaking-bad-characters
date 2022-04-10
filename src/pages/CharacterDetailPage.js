@@ -9,7 +9,7 @@ export function CharacterDetailPage() {
   const { t } = useTranslation();
 
   return (
-    <Layout isLoading={loading} error={(error)} loadingText={t('characterPage.loadingText')}>
+    <Layout isLoading={loading} error={error} loadingText={t('characterPage.loadingText')}>
       <CharacterDetail {...character} />
     </Layout>
   );

@@ -28,7 +28,8 @@ export const StyledCardLink = styled(Link)`
   cursor: pointer;
   height: 100%;
   width: 100%;
-  color: #fff;
+  color: ${({ theme }) => theme.colors.purple};
+  font-weight: bold;
   opacity: 0;
   transition: opacity 0.4s;
   transition-delay: 0.4s;
@@ -38,7 +39,7 @@ export const StyledCard = styled.article`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #cecece;
+  background: ${({ theme }) => theme.colors.cardBackground};
   border-radius: 8px;
   position: relative;
   overflow: hidden;
@@ -63,5 +64,16 @@ export const StyledCard = styled.article`
         transform: scale(1.1);
       }
     }
+  }
+`;
+
+export const StyledCardTextWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+
+  & > h2 {
+    color: ${({ theme }) => theme.colors.purple};
   }
 `;

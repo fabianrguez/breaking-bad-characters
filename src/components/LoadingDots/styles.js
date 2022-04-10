@@ -1,41 +1,41 @@
 import styled, { keyframes } from 'styled-components';
 
-const dotFalling = keyframes`
+const dotFalling = ({ theme }) => keyframes`
     0% {
     box-shadow: 9999px -15px 0 0 rgba(152, 128, 255, 0);
   }
   25%,
   50%,
   75% {
-    box-shadow: 9999px 0 0 0 #9880ff;
+    box-shadow: 9999px 0 0 0 ${theme.colors.purple};
   }
   100% {
     box-shadow: 9999px 15px 0 0 rgba(152, 128, 255, 0);
   }
 `;
 
-const dotFallingBefore = keyframes`
+const dotFallingBefore = ({ theme }) => keyframes`
   0% {
     box-shadow: 9984px -15px 0 0 rgba(152, 128, 255, 0);
   }
   25%,
   50%,
   75% {
-    box-shadow: 9984px 0 0 0 #9880ff;
+    box-shadow: 9984px 0 0 0 ${theme.colors.purple};
   }
   100% {
     box-shadow: 9984px 15px 0 0 rgba(152, 128, 255, 0);
   }
 `;
 
-const dotFallingAfter = keyframes`
+const dotFallingAfter = ({ theme }) => keyframes`
   0% {
     box-shadow: 10014px -15px 0 0 rgba(152, 128, 255, 0);
   }
   25%,
   50%,
   75% {
-    box-shadow: 10014px 0 0 0 #9880ff;
+    box-shadow: 10014px 0 0 0 ${theme.colors.purple};
   }
   100% {
     box-shadow: 10014px 15px 0 0 rgba(152, 128, 255, 0);
@@ -51,7 +51,7 @@ export const StyledLoadingDotsWrapper = styled.div`
   & span {
     margin-top: 0.75rem;
   }
-`
+`;
 
 export const StyledLoadingDots = styled.div`
   position: relative;
@@ -59,9 +59,9 @@ export const StyledLoadingDots = styled.div`
   width: 10px;
   height: 10px;
   border-radius: 5px;
-  background-color: #9880ff;
-  color: #9880ff;
-  box-shadow: 9999px 0 0 0 #9880ff;
+  background-color: ${({ theme }) => theme.colors.purple};
+  color: ${({ theme }) => theme.colors.purple};
+  box-shadow: 9999px 0 0 0 ${({ theme }) => theme.colors.purple};
   animation: ${dotFalling} 1s infinite linear;
   animation-delay: 0.1s;
 
@@ -77,8 +77,8 @@ export const StyledLoadingDots = styled.div`
     width: 10px;
     height: 10px;
     border-radius: 5px;
-    background-color: #9880ff;
-    color: #9880ff;
+    background-color: ${({ theme }) => theme.colors.purple};
+    color: ${({ theme }) => theme.colors.purple};
     animation: ${dotFallingBefore} 1s infinite linear;
     animation-delay: 0s;
   }
@@ -87,8 +87,8 @@ export const StyledLoadingDots = styled.div`
     width: 10px;
     height: 10px;
     border-radius: 5px;
-    background-color: #9880ff;
-    color: #9880ff;
+    background-color: ${({ theme }) => theme.colors.purple};
+    color: ${({ theme }) => theme.colors.purple};
     animation: ${dotFallingAfter} 1s infinite linear;
     animation-delay: 0.2s;
   }
