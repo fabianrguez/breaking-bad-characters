@@ -1,5 +1,5 @@
 import { useCharactersContext, usePaginated } from 'hooks';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { getPaginatedCharacters } from 'services';
 
 // total characters: 62

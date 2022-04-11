@@ -11,6 +11,9 @@
   "characterPage": {
     "loadingText": "Loading character information..."
   },
+  "errorPage": {
+    "backToCharacters": "Return to characters list"
+  },
   "character": {
     "card": {
       "knowMore": "Know more ..."
