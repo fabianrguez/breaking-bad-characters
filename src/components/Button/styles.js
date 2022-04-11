@@ -28,4 +28,5 @@ export const StyledButton = styled.button`
   background: transparent;
   color: inherit;
   font-weight: bold;
+  font-size: 18px;
 `;
