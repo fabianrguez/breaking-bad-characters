@@ -6,7 +6,7 @@ export function ErrorPage() {
 
   return (
     <StyledErrorPageWrapper>
-      <h1>It seems an error ocurred</h1>
+      <h1>{t('errorPage.title')}</h1>
       <StlyedErrorPageLink to="/characters">{t('errorPage.backToCharacters')}</StlyedErrorPageLink>
     </StyledErrorPageWrapper>
   );

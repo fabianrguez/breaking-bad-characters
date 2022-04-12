@@ -12,6 +12,7 @@
     "loadingText": "Loading character information..."
   },
   "errorPage": {
+    "title": "Oops, it seems an error ocurred.",
     "backToCharacters": "Return to characters list"
   },
   "character": {
@@ -43,5 +44,9 @@
   },
   "charcterList": {
     "loadMore": "Load more..."
+  },
+  "languagePicker": {
+    "es": "Español",
+    "en": "English"
   }
 }

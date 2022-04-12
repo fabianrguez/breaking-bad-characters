@@ -12,6 +12,7 @@
     "loadingText": "Cargando la información del personaje..."
   },
   "errorPage": {
+    "title": "Ups! Parece que ha habido un error.",
     "backToCharacters": "Volver a la lista de personajes"
   },
   "character": {
@@ -43,5 +44,9 @@
   },
   "characterList": {
     "loadMore": "Cargar más ..."
+  },
+  "languagePicker": {
+    "es": "Español",
+    "en": "English"
   }
 }

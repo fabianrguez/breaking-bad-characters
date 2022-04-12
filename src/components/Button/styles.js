@@ -5,8 +5,8 @@ export const StlyedButtonWrapper = styled.span`
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  border: 2px solid ${({theme}) => theme.colors.purple};
-  color: ${({theme}) => theme.colors.purple};
+  border: ${({ outlined, theme }) => (outlined ? `2px solid ${theme.colors.purple}` : 0)};
+  color: ${({ outlined, theme }) => (outlined ? theme.colors.purple : theme.colors.white)};
   min-height: 2.5rem;
   min-width: 12rem;
   border-radius: 4px;
