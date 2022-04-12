@@ -1,7 +1,6 @@
 import { getCharacterQuote } from 'services';
+import { getCharacterName } from 'utils';
 import { useApiCall } from './useApiCall';
-
-const getCharacterName = (name) => name.split(' ').join('+');
 
 export function useCharacterQuote(character) {
   const { data: quote, refetch, loading } = useApiCall(getCharacterQuote, getCharacterName(character ?? ''));

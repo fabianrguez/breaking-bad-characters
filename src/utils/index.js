@@ -1,3 +1,4 @@
 import { mergeArrays } from './mergeArrays';
+import { getCharacterName } from './getCharacterName';
 
-export { mergeArrays };
+export { mergeArrays, getCharacterName };

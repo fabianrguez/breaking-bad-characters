@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react';
 import { getCharacter, getCharacterDeaths } from 'services';
+import { getCharacterName } from 'utils';
 import { useApiCall } from './useApiCall';
-
-const getCharacterName = (name) => name.split(' ').join('+');
 
 export function useCharacter(id) {
   const [characterError, setCharacterError] = useState(false);
