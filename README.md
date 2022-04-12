@@ -24,7 +24,7 @@ Para arrancar la aplicación en local hay que ejecutar el siguiente:
 A continuación se van a listar las carpetas que forman parte del proyecto *(a partir de src)*
 
 ### Components
-Contiene todo los componentes que se usan dentro de la apliación.
+Contiene todo los componentes que se usan dentro de la aplicación.
 - Button
 - CharacterCard
 - CharacterDetail
